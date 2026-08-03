@@ -1,0 +1,1572 @@
+{
+ "foods": {
+  "almonds": {
+   "aliases": [
+    "almond",
+    "badam"
+   ],
+   "per_100g": {
+    "calories": 579.0,
+    "protein_g": 21.2,
+    "carbs_g": 21.6,
+    "fat_g": 49.9,
+    "fiber_g": 12.5
+   },
+   "units": {
+    "g": 1,
+    "piece": 1.2,
+    "pieces": 1.2,
+    "handful": 28.0
+   },
+   "default_unit": "piece",
+   "tags": [
+    "nuts_seeds",
+    "protein"
+   ],
+   "flags": [],
+   "state": "dry"
+  },
+  "apple": {
+   "aliases": [],
+   "per_100g": {
+    "calories": 52.0,
+    "protein_g": 0.3,
+    "carbs_g": 13.8,
+    "fat_g": 0.2,
+    "fiber_g": 2.4
+   },
+   "units": {
+    "g": 1,
+    "cup": 125.0,
+    "piece": 180.0,
+    "pieces": 180.0,
+    "medium": 180.0
+   },
+   "default_unit": "piece",
+   "tags": [
+    "fruit"
+   ],
+   "flags": [],
+   "state": "raw"
+  },
+  "banana": {
+   "aliases": [
+    "kela"
+   ],
+   "per_100g": {
+    "calories": 89.0,
+    "protein_g": 1.1,
+    "carbs_g": 22.8,
+    "fat_g": 0.3,
+    "fiber_g": 2.6
+   },
+   "units": {
+    "g": 1,
+    "piece": 120.0,
+    "pieces": 120.0,
+    "medium": 120.0
+   },
+   "default_unit": "piece",
+   "tags": [
+    "fruit"
+   ],
+   "flags": [
+    "high_sugar_fruit"
+   ],
+   "state": "raw"
+  },
+  "berries": {
+   "aliases": [
+    "strawberries",
+    "blueberries",
+    "mixed berries"
+   ],
+   "per_100g": {
+    "calories": 45.0,
+    "protein_g": 0.9,
+    "carbs_g": 10.5,
+    "fat_g": 0.4,
+    "fiber_g": 3.5
+   },
+   "units": {
+    "g": 1,
+    "cup": 145.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "fruit"
+   ],
+   "flags": [],
+   "state": "raw"
+  },
+  "bread": {
+   "aliases": [
+    "white bread",
+    "toast",
+    "brown bread",
+    "slice of bread"
+   ],
+   "per_100g": {
+    "calories": 265.0,
+    "protein_g": 9.0,
+    "carbs_g": 49.0,
+    "fat_g": 3.2,
+    "fiber_g": 2.7
+   },
+   "units": {
+    "g": 1,
+    "piece": 28.0,
+    "pieces": 28.0,
+    "slice": 28.0
+   },
+   "default_unit": "slice",
+   "tags": [
+    "grain"
+   ],
+   "flags": [
+    "bakery",
+    "refined_grain",
+    "processed"
+   ],
+   "state": "as_eaten"
+  },
+  "buckwheat": {
+   "aliases": [
+    "kuttu",
+    "cooked buckwheat"
+   ],
+   "per_100g": {
+    "calories": 92.0,
+    "protein_g": 3.4,
+    "carbs_g": 19.9,
+    "fat_g": 0.6,
+    "fiber_g": 2.7
+   },
+   "units": {
+    "g": 1,
+    "cup": 168.0,
+    "katori": 110.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "grain"
+   ],
+   "flags": [],
+   "state": "cooked"
+  },
+  "cheese": {
+   "aliases": [
+    "parmesan",
+    "cheddar"
+   ],
+   "per_100g": {
+    "calories": 350.0,
+    "protein_g": 24.0,
+    "carbs_g": 2.5,
+    "fat_g": 27.0,
+    "fiber_g": 0.0
+   },
+   "units": {
+    "g": 1,
+    "cup": 120.0,
+    "tbsp": 15.0,
+    "slice": 20.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "protein",
+    "dairy"
+   ],
+   "flags": [],
+   "state": "as_eaten"
+  },
+  "chia seeds": {
+   "aliases": [
+    "chia"
+   ],
+   "per_100g": {
+    "calories": 486.0,
+    "protein_g": 16.5,
+    "carbs_g": 42.1,
+    "fat_g": 30.7,
+    "fiber_g": 34.4
+   },
+   "units": {
+    "g": 1,
+    "tbsp": 10.5,
+    "tsp": 3.5
+   },
+   "default_unit": "tsp",
+   "tags": [
+    "nuts_seeds"
+   ],
+   "flags": [],
+   "state": "dry"
+  },
+  "chole": {
+   "aliases": [
+    "chana masala",
+    "chickpea curry",
+    "chhole"
+   ],
+   "per_100g": {
+    "calories": 125.0,
+    "protein_g": 6.0,
+    "carbs_g": 17.0,
+    "fat_g": 3.8,
+    "fiber_g": 5.0
+   },
+   "units": {
+    "g": 1,
+    "cup": 200.0,
+    "katori": 125.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "protein"
+   ],
+   "flags": [],
+   "state": "cooked"
+  },
+  "curd": {
+   "aliases": [
+    "yogurt",
+    "dahi",
+    "plain curd",
+    "plain yogurt"
+   ],
+   "per_100g": {
+    "calories": 61.0,
+    "protein_g": 3.5,
+    "carbs_g": 4.7,
+    "fat_g": 3.3,
+    "fiber_g": 0.0
+   },
+   "units": {
+    "g": 1,
+    "cup": 245.0,
+    "katori": 150.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "protein",
+    "dairy"
+   ],
+   "flags": [],
+   "state": "as_eaten"
+  },
+  "dal": {
+   "aliases": [
+    "daal",
+    "kootu",
+    "dhal",
+    "dal with vegetables",
+    "dal sabzi",
+    "lentils",
+    "toor dal",
+    "moong dal",
+    "masoor dal",
+    "chana dal",
+    "cooked dal"
+   ],
+   "per_100g": {
+    "calories": 72.0,
+    "protein_g": 3.9,
+    "carbs_g": 10.0,
+    "fat_g": 2.0,
+    "fiber_g": 3.2
+   },
+   "units": {
+    "g": 1,
+    "cup": 200.0,
+    "katori": 125.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "protein",
+    "vegetable"
+   ],
+   "flags": [],
+   "state": "cooked"
+  },
+  "dosa": {
+   "aliases": [
+    "plain dosa",
+    "home dosa",
+    "small dosa",
+    "dosai"
+   ],
+   "per_100g": {
+    "calories": 168.0,
+    "protein_g": 4.2,
+    "carbs_g": 29.0,
+    "fat_g": 3.6,
+    "fiber_g": 1.8
+   },
+   "units": {
+    "g": 1,
+    "piece": 55.0,
+    "pieces": 55.0
+   },
+   "default_unit": "piece",
+   "tags": [
+    "grain"
+   ],
+   "flags": [],
+   "state": "cooked"
+  },
+  "feta cheese": {
+   "aliases": [
+    "feta"
+   ],
+   "per_100g": {
+    "calories": 264.0,
+    "protein_g": 14.2,
+    "carbs_g": 4.1,
+    "fat_g": 21.3,
+    "fiber_g": 0.0
+   },
+   "units": {
+    "g": 1,
+    "cup": 150.0,
+    "tbsp": 12.0,
+    "cube": 15.0,
+    "cubes": 15.0,
+    "slice": 28.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "protein",
+    "dairy"
+   ],
+   "flags": [],
+   "state": "as_eaten"
+  },
+  "flaxseed": {
+   "aliases": [
+    "flax seeds",
+    "alsi",
+    "flaxseeds",
+    "linseed"
+   ],
+   "per_100g": {
+    "calories": 534.0,
+    "protein_g": 18.3,
+    "carbs_g": 28.9,
+    "fat_g": 42.2,
+    "fiber_g": 27.3
+   },
+   "units": {
+    "g": 1,
+    "tbsp": 10.5,
+    "tsp": 3.5
+   },
+   "default_unit": "tsp",
+   "tags": [
+    "nuts_seeds"
+   ],
+   "flags": [],
+   "state": "dry"
+  },
+  "foxtail millet": {
+   "aliases": [
+    "foxtail",
+    "thinai",
+    "kangni",
+    "navane",
+    "cooked foxtail millet"
+   ],
+   "per_100g": {
+    "calories": 112.0,
+    "protein_g": 3.4,
+    "carbs_g": 22.0,
+    "fat_g": 0.9,
+    "fiber_g": 2.4
+   },
+   "units": {
+    "g": 1,
+    "cup": 180.0,
+    "katori": 115.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "grain"
+   ],
+   "flags": [],
+   "state": "cooked"
+  },
+  "ghee": {
+   "aliases": [
+    "clarified butter"
+   ],
+   "per_100g": {
+    "calories": 900.0,
+    "protein_g": 0.0,
+    "carbs_g": 0.0,
+    "fat_g": 100.0,
+    "fiber_g": 0.0
+   },
+   "units": {
+    "g": 1,
+    "tbsp": 13.5,
+    "tsp": 4.5
+   },
+   "default_unit": "tsp",
+   "tags": [],
+   "flags": [],
+   "state": "as_eaten"
+  },
+  "grapes": {
+   "aliases": [
+    "angoor"
+   ],
+   "per_100g": {
+    "calories": 69.0,
+    "protein_g": 0.7,
+    "carbs_g": 18.1,
+    "fat_g": 0.2,
+    "fiber_g": 0.9
+   },
+   "units": {
+    "g": 1,
+    "cup": 150.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "fruit"
+   ],
+   "flags": [
+    "high_sugar_fruit"
+   ],
+   "state": "raw"
+  },
+  "greek yogurt": {
+   "aliases": [
+    "hung curd"
+   ],
+   "per_100g": {
+    "calories": 59.0,
+    "protein_g": 10.0,
+    "carbs_g": 3.6,
+    "fat_g": 0.4,
+    "fiber_g": 0.0
+   },
+   "units": {
+    "g": 1,
+    "cup": 245.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "protein",
+    "dairy"
+   ],
+   "flags": [],
+   "state": "as_eaten"
+  },
+  "green tea": {
+   "aliases": [
+    "greentea"
+   ],
+   "per_100g": {
+    "calories": 1.0,
+    "protein_g": 0.0,
+    "carbs_g": 0.2,
+    "fat_g": 0.0,
+    "fiber_g": 0.0
+   },
+   "units": {
+    "g": 1,
+    "cup": 240.0,
+    "mug": 300.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "green_tea",
+    "beverage"
+   ],
+   "flags": [],
+   "state": "as_eaten"
+  },
+  "guava": {
+   "aliases": [
+    "amrood"
+   ],
+   "per_100g": {
+    "calories": 68.0,
+    "protein_g": 2.6,
+    "carbs_g": 14.3,
+    "fat_g": 1.0,
+    "fiber_g": 5.4
+   },
+   "units": {
+    "g": 1,
+    "piece": 100.0,
+    "pieces": 100.0,
+    "medium": 100.0
+   },
+   "default_unit": "piece",
+   "tags": [
+    "fruit"
+   ],
+   "flags": [],
+   "state": "raw"
+  },
+  "hummus": {
+   "aliases": [
+    "houmous",
+    "hummous",
+    "chickpea dip"
+   ],
+   "per_100g": {
+    "calories": 166.0,
+    "protein_g": 7.9,
+    "carbs_g": 14.3,
+    "fat_g": 9.6,
+    "fiber_g": 6.0
+   },
+   "units": {
+    "g": 1,
+    "cup": 246.0,
+    "tbsp": 15.0,
+    "tsp": 5.0
+   },
+   "default_unit": "tbsp",
+   "tags": [
+    "protein"
+   ],
+   "flags": [],
+   "state": "as_eaten"
+  },
+  "idli": {
+   "aliases": [
+    "idly",
+    "idlis"
+   ],
+   "per_100g": {
+    "calories": 125.0,
+    "protein_g": 3.4,
+    "carbs_g": 25.5,
+    "fat_g": 0.5,
+    "fiber_g": 1.2
+   },
+   "units": {
+    "g": 1,
+    "piece": 40.0,
+    "pieces": 40.0
+   },
+   "default_unit": "piece",
+   "tags": [
+    "grain"
+   ],
+   "flags": [],
+   "state": "cooked"
+  },
+  "jack cheese": {
+   "aliases": [
+    "monterey jack",
+    "pepper jack",
+    "jack"
+   ],
+   "per_100g": {
+    "calories": 373.0,
+    "protein_g": 24.5,
+    "carbs_g": 0.7,
+    "fat_g": 30.3,
+    "fiber_g": 0.0
+   },
+   "units": {
+    "g": 1,
+    "cup": 113.0,
+    "tbsp": 14.0,
+    "cube": 15.0,
+    "cubes": 15.0,
+    "slice": 28.0
+   },
+   "default_unit": "slice",
+   "tags": [
+    "protein",
+    "dairy"
+   ],
+   "flags": [],
+   "state": "as_eaten"
+  },
+  "jowar roti": {
+   "aliases": [
+    "jawar roti",
+    "bhakri",
+    "sorghum roti"
+   ],
+   "per_100g": {
+    "calories": 285.0,
+    "protein_g": 8.5,
+    "carbs_g": 61.0,
+    "fat_g": 2.2,
+    "fiber_g": 9.5
+   },
+   "units": {
+    "g": 1,
+    "piece": 50.0,
+    "pieces": 50.0
+   },
+   "default_unit": "piece",
+   "tags": [
+    "grain"
+   ],
+   "flags": [],
+   "state": "cooked"
+  },
+  "lemon water": {
+   "aliases": [
+    "nimbu pani",
+    "lemon garlic water",
+    "warm lemon water"
+   ],
+   "per_100g": {
+    "calories": 6.0,
+    "protein_g": 0.1,
+    "carbs_g": 1.6,
+    "fat_g": 0.0,
+    "fiber_g": 0.2
+   },
+   "units": {
+    "g": 1,
+    "cup": 240.0,
+    "glass": 240.0
+   },
+   "default_unit": "glass",
+   "tags": [
+    "water",
+    "beverage"
+   ],
+   "flags": [],
+   "state": "as_eaten"
+  },
+  "mango": {
+   "aliases": [
+    "aam"
+   ],
+   "per_100g": {
+    "calories": 60.0,
+    "protein_g": 0.8,
+    "carbs_g": 15.0,
+    "fat_g": 0.4,
+    "fiber_g": 1.6
+   },
+   "units": {
+    "g": 1,
+    "cup": 165.0,
+    "piece": 200.0,
+    "pieces": 200.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "fruit"
+   ],
+   "flags": [
+    "high_sugar_fruit"
+   ],
+   "state": "raw"
+  },
+  "millet": {
+   "aliases": [
+    "kodo millet",
+    "bajra",
+    "cooked millet"
+   ],
+   "per_100g": {
+    "calories": 119.0,
+    "protein_g": 3.5,
+    "carbs_g": 23.7,
+    "fat_g": 1.0,
+    "fiber_g": 2.3
+   },
+   "units": {
+    "g": 1,
+    "cup": 174.0,
+    "katori": 110.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "grain"
+   ],
+   "flags": [],
+   "state": "cooked"
+  },
+  "millet pongal": {
+   "aliases": [
+    "pongal",
+    "ven pongal",
+    "millet ven pongal",
+    "khara pongal"
+   ],
+   "per_100g": {
+    "calories": 128.0,
+    "protein_g": 4.6,
+    "carbs_g": 20.0,
+    "fat_g": 3.4,
+    "fiber_g": 2.6
+   },
+   "units": {
+    "g": 1,
+    "cup": 200.0,
+    "katori": 125.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "grain",
+    "protein"
+   ],
+   "flags": [],
+   "state": "cooked"
+  },
+  "mixed salad": {
+   "aliases": [
+    "cucumber tomato carrot salad",
+    "salad",
+    "kachumber",
+    "green salad",
+    "cucumber salad"
+   ],
+   "per_100g": {
+    "calories": 23.0,
+    "protein_g": 0.9,
+    "carbs_g": 4.8,
+    "fat_g": 0.2,
+    "fiber_g": 1.5
+   },
+   "units": {
+    "g": 1,
+    "cup": 150.0,
+    "katori": 100.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "salad",
+    "vegetable"
+   ],
+   "flags": [],
+   "state": "raw"
+  },
+  "mixed vegetables": {
+   "aliases": [
+    "sabzi",
+    "sabji",
+    "stir fried vegetables",
+    "sauteed vegetables",
+    "veg curry",
+    "seasonal vegetable"
+   ],
+   "per_100g": {
+    "calories": 60.0,
+    "protein_g": 1.8,
+    "carbs_g": 7.0,
+    "fat_g": 3.0,
+    "fiber_g": 2.8
+   },
+   "units": {
+    "g": 1,
+    "cup": 150.0,
+    "katori": 100.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "vegetable"
+   ],
+   "flags": [],
+   "state": "cooked"
+  },
+  "oats": {
+   "aliases": [
+    "oatmeal",
+    "oats porridge",
+    "porridge",
+    "rolled oats"
+   ],
+   "per_100g": {
+    "calories": 68.0,
+    "protein_g": 2.4,
+    "carbs_g": 12.0,
+    "fat_g": 1.4,
+    "fiber_g": 1.7
+   },
+   "units": {
+    "g": 1,
+    "cup": 240.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "grain"
+   ],
+   "flags": [],
+   "state": "cooked"
+  },
+  "orange": {
+   "aliases": [
+    "santra"
+   ],
+   "per_100g": {
+    "calories": 47.0,
+    "protein_g": 0.9,
+    "carbs_g": 11.8,
+    "fat_g": 0.1,
+    "fiber_g": 2.4
+   },
+   "units": {
+    "g": 1,
+    "piece": 130.0,
+    "pieces": 130.0,
+    "medium": 130.0
+   },
+   "default_unit": "piece",
+   "tags": [
+    "fruit"
+   ],
+   "flags": [],
+   "state": "raw"
+  },
+  "palak paneer": {
+   "aliases": [
+    "saag paneer",
+    "spinach paneer",
+    "palak panner"
+   ],
+   "per_100g": {
+    "calories": 145.0,
+    "protein_g": 9.1,
+    "carbs_g": 5.4,
+    "fat_g": 10.5,
+    "fiber_g": 2.0
+   },
+   "units": {
+    "g": 1,
+    "cup": 200.0,
+    "katori": 125.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "protein",
+    "dairy",
+    "vegetable"
+   ],
+   "flags": [],
+   "state": "cooked"
+  },
+  "paneer": {
+   "aliases": [
+    "panir",
+    "indian cheese"
+   ],
+   "per_100g": {
+    "calories": 265.0,
+    "protein_g": 18.3,
+    "carbs_g": 1.2,
+    "fat_g": 20.8,
+    "fiber_g": 0.0
+   },
+   "units": {
+    "g": 1,
+    "cup": 150.0,
+    "cube": 15.0,
+    "cubes": 15.0
+   },
+   "default_unit": "cube",
+   "tags": [
+    "protein",
+    "dairy"
+   ],
+   "flags": [],
+   "state": "as_eaten"
+  },
+  "paneer bhurji": {
+   "aliases": [
+    "bhurji",
+    "scrambled paneer",
+    "paneer burji"
+   ],
+   "per_100g": {
+    "calories": 266.0,
+    "protein_g": 15.1,
+    "carbs_g": 2.6,
+    "fat_g": 21.7,
+    "fiber_g": 0.4
+   },
+   "units": {
+    "g": 1,
+    "cup": 170.0,
+    "katori": 110.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "protein",
+    "dairy"
+   ],
+   "flags": [],
+   "state": "cooked"
+  },
+  "paneer gravy": {
+   "aliases": [
+    "paneer curry",
+    "paneer masala",
+    "paneer sabzi",
+    "tomato paneer",
+    "paneer gravy curry"
+   ],
+   "per_100g": {
+    "calories": 120.0,
+    "protein_g": 6.6,
+    "carbs_g": 3.4,
+    "fat_g": 9.0,
+    "fiber_g": 0.8
+   },
+   "units": {
+    "g": 1,
+    "cup": 200.0,
+    "katori": 125.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "protein",
+    "dairy",
+    "vegetable"
+   ],
+   "flags": [],
+   "state": "cooked"
+  },
+  "paneer stir fry": {
+   "aliases": [
+    "sauteed paneer",
+    "paneer stir fried",
+    "stir fried paneer",
+    "paneer with vegetables",
+    "paneer bell pepper",
+    "paneer capsicum"
+   ],
+   "per_100g": {
+    "calories": 158.0,
+    "protein_g": 8.9,
+    "carbs_g": 4.8,
+    "fat_g": 11.6,
+    "fiber_g": 1.4
+   },
+   "units": {
+    "g": 1,
+    "cup": 180.0,
+    "katori": 115.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "protein",
+    "dairy",
+    "vegetable"
+   ],
+   "flags": [],
+   "state": "cooked"
+  },
+  "peanuts": {
+   "aliases": [
+    "peanut",
+    "moongphali",
+    "groundnut"
+   ],
+   "per_100g": {
+    "calories": 567.0,
+    "protein_g": 25.8,
+    "carbs_g": 16.1,
+    "fat_g": 49.2,
+    "fiber_g": 8.5
+   },
+   "units": {
+    "g": 1,
+    "tbsp": 9.0,
+    "handful": 28.0
+   },
+   "default_unit": "handful",
+   "tags": [
+    "nuts_seeds",
+    "protein"
+   ],
+   "flags": [],
+   "state": "dry"
+  },
+  "plain dal": {
+   "aliases": [
+    "dal only",
+    "plain daal",
+    "dal without vegetables"
+   ],
+   "per_100g": {
+    "calories": 76.0,
+    "protein_g": 4.6,
+    "carbs_g": 11.0,
+    "fat_g": 1.6,
+    "fiber_g": 3.8
+   },
+   "units": {
+    "g": 1,
+    "cup": 200.0,
+    "katori": 125.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "protein"
+   ],
+   "flags": [],
+   "state": "cooked"
+  },
+  "pomegranate": {
+   "aliases": [
+    "anar"
+   ],
+   "per_100g": {
+    "calories": 83.0,
+    "protein_g": 1.7,
+    "carbs_g": 18.7,
+    "fat_g": 1.2,
+    "fiber_g": 4.0
+   },
+   "units": {
+    "g": 1,
+    "cup": 174.0,
+    "katori": 100.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "fruit"
+   ],
+   "flags": [],
+   "state": "raw"
+  },
+  "pumpkin seeds": {
+   "aliases": [
+    "pepitas"
+   ],
+   "per_100g": {
+    "calories": 559.0,
+    "protein_g": 30.2,
+    "carbs_g": 10.7,
+    "fat_g": 49.1,
+    "fiber_g": 6.0
+   },
+   "units": {
+    "g": 1,
+    "tbsp": 12.0,
+    "tsp": 4.0,
+    "handful": 28.0
+   },
+   "default_unit": "tbsp",
+   "tags": [
+    "nuts_seeds",
+    "protein"
+   ],
+   "flags": [],
+   "state": "dry"
+  },
+  "quinoa": {
+   "aliases": [
+    "quinoa pulav",
+    "quinoa pulao",
+    "cooked quinoa"
+   ],
+   "per_100g": {
+    "calories": 120.0,
+    "protein_g": 4.4,
+    "carbs_g": 21.3,
+    "fat_g": 1.9,
+    "fiber_g": 2.8
+   },
+   "units": {
+    "g": 1,
+    "cup": 185.0,
+    "katori": 120.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "grain"
+   ],
+   "flags": [],
+   "state": "cooked"
+  },
+  "ragi roti": {
+   "aliases": [
+    "ragi",
+    "finger millet roti",
+    "nachni roti"
+   ],
+   "per_100g": {
+    "calories": 280.0,
+    "protein_g": 7.2,
+    "carbs_g": 60.0,
+    "fat_g": 2.5,
+    "fiber_g": 11.0
+   },
+   "units": {
+    "g": 1,
+    "piece": 50.0,
+    "pieces": 50.0
+   },
+   "default_unit": "piece",
+   "tags": [
+    "grain"
+   ],
+   "flags": [],
+   "state": "cooked"
+  },
+  "rajma": {
+   "aliases": [
+    "kidney beans",
+    "rajma curry"
+   ],
+   "per_100g": {
+    "calories": 110.0,
+    "protein_g": 6.5,
+    "carbs_g": 16.0,
+    "fat_g": 2.4,
+    "fiber_g": 5.5
+   },
+   "units": {
+    "g": 1,
+    "cup": 200.0,
+    "katori": 125.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "protein"
+   ],
+   "flags": [],
+   "state": "cooked"
+  },
+  "rasam": {
+   "aliases": [
+    "saaru",
+    "charu",
+    "rasam soup"
+   ],
+   "per_100g": {
+    "calories": 32.0,
+    "protein_g": 1.2,
+    "carbs_g": 4.5,
+    "fat_g": 1.0,
+    "fiber_g": 0.8
+   },
+   "units": {
+    "g": 1,
+    "cup": 240.0,
+    "katori": 150.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "vegetable"
+   ],
+   "flags": [],
+   "state": "cooked"
+  },
+  "roasted chickpea": {
+   "aliases": [
+    "roasted chana",
+    "bhuna chana",
+    "roasted gram"
+   ],
+   "per_100g": {
+    "calories": 364.0,
+    "protein_g": 19.0,
+    "carbs_g": 61.0,
+    "fat_g": 5.0,
+    "fiber_g": 17.0
+   },
+   "units": {
+    "g": 1,
+    "cup": 145.0,
+    "handful": 30.0
+   },
+   "default_unit": "g",
+   "tags": [
+    "protein"
+   ],
+   "flags": [],
+   "state": "dry"
+  },
+  "roasted peanuts": {
+   "aliases": [
+    "roasted groundnut",
+    "roasted moongphali",
+    "dry roasted peanuts"
+   ],
+   "per_100g": {
+    "calories": 587.0,
+    "protein_g": 24.4,
+    "carbs_g": 21.5,
+    "fat_g": 49.7,
+    "fiber_g": 8.0
+   },
+   "units": {
+    "g": 1,
+    "cup": 146.0,
+    "tbsp": 9.0,
+    "handful": 28.0
+   },
+   "default_unit": "handful",
+   "tags": [
+    "nuts_seeds",
+    "protein"
+   ],
+   "flags": [],
+   "state": "dry"
+  },
+  "roti": {
+   "aliases": [
+    "chapati",
+    "phulka",
+    "wheat roti"
+   ],
+   "per_100g": {
+    "calories": 297.0,
+    "protein_g": 9.6,
+    "carbs_g": 55.0,
+    "fat_g": 4.4,
+    "fiber_g": 8.9
+   },
+   "units": {
+    "g": 1,
+    "piece": 40.0,
+    "pieces": 40.0,
+    "medium": 40.0
+   },
+   "default_unit": "piece",
+   "tags": [
+    "grain"
+   ],
+   "flags": [],
+   "state": "cooked"
+  },
+  "sambar": {
+   "aliases": [
+    "sambhar",
+    "saaru"
+   ],
+   "per_100g": {
+    "calories": 62.0,
+    "protein_g": 2.8,
+    "carbs_g": 8.5,
+    "fat_g": 2.0,
+    "fiber_g": 2.5
+   },
+   "units": {
+    "g": 1,
+    "cup": 240.0,
+    "katori": 150.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "protein",
+    "vegetable"
+   ],
+   "flags": [],
+   "state": "cooked"
+  },
+  "samosa": {
+   "aliases": [],
+   "per_100g": {
+    "calories": 308.0,
+    "protein_g": 5.0,
+    "carbs_g": 32.0,
+    "fat_g": 18.0,
+    "fiber_g": 2.5
+   },
+   "units": {
+    "g": 1,
+    "piece": 60.0,
+    "pieces": 60.0
+   },
+   "default_unit": "piece",
+   "tags": [
+    "grain"
+   ],
+   "flags": [
+    "fried",
+    "refined_grain"
+   ],
+   "state": "cooked"
+  },
+  "sprouts": {
+   "aliases": [
+    "sprout salad",
+    "moong sprouts",
+    "sprouted moong",
+    "mixed sprouts"
+   ],
+   "per_100g": {
+    "calories": 100.0,
+    "protein_g": 6.0,
+    "carbs_g": 16.6,
+    "fat_g": 1.0,
+    "fiber_g": 4.6
+   },
+   "units": {
+    "g": 1,
+    "cup": 150.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "protein",
+    "salad"
+   ],
+   "flags": [],
+   "state": "raw"
+  },
+  "sunflower seeds": {
+   "aliases": [],
+   "per_100g": {
+    "calories": 584.0,
+    "protein_g": 20.8,
+    "carbs_g": 20.0,
+    "fat_g": 51.5,
+    "fiber_g": 8.6
+   },
+   "units": {
+    "g": 1,
+    "tbsp": 12.0,
+    "tsp": 4.0,
+    "handful": 28.0
+   },
+   "default_unit": "tbsp",
+   "tags": [
+    "nuts_seeds",
+    "protein"
+   ],
+   "flags": [],
+   "state": "dry"
+  },
+  "tea": {
+   "aliases": [
+    "chai",
+    "milk tea",
+    "coffee",
+    "filter coffee",
+    "latte"
+   ],
+   "per_100g": {
+    "calories": 43.0,
+    "protein_g": 1.5,
+    "carbs_g": 6.5,
+    "fat_g": 1.3,
+    "fiber_g": 0.0
+   },
+   "units": {
+    "g": 1,
+    "cup": 150.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "beverage"
+   ],
+   "flags": [
+    "caffeine",
+    "sugar"
+   ],
+   "state": "as_eaten"
+  },
+  "upma": {
+   "aliases": [
+    "rava upma",
+    "sooji upma"
+   ],
+   "per_100g": {
+    "calories": 150.0,
+    "protein_g": 3.5,
+    "carbs_g": 24.0,
+    "fat_g": 4.5,
+    "fiber_g": 1.8
+   },
+   "units": {
+    "g": 1,
+    "cup": 200.0,
+    "katori": 125.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "grain"
+   ],
+   "flags": [],
+   "state": "cooked"
+  },
+  "walnuts": {
+   "aliases": [
+    "walnut",
+    "akhrot"
+   ],
+   "per_100g": {
+    "calories": 654.0,
+    "protein_g": 15.2,
+    "carbs_g": 13.7,
+    "fat_g": 65.2,
+    "fiber_g": 6.7
+   },
+   "units": {
+    "g": 1,
+    "piece": 4.0,
+    "pieces": 4.0,
+    "handful": 28.0,
+    "whole": 4.0
+   },
+   "default_unit": "piece",
+   "tags": [
+    "nuts_seeds"
+   ],
+   "flags": [],
+   "state": "dry"
+  },
+  "water": {
+   "aliases": [
+    "plain water",
+    "warm water"
+   ],
+   "per_100g": {
+    "calories": 0.0,
+    "protein_g": 0.0,
+    "carbs_g": 0.0,
+    "fat_g": 0.0,
+    "fiber_g": 0.0
+   },
+   "units": {
+    "g": 1,
+    "cup": 240.0,
+    "glass": 240.0,
+    "litre": 1000.0,
+    "l": 1000.0
+   },
+   "default_unit": "glass",
+   "tags": [
+    "water"
+   ],
+   "flags": [],
+   "state": "as_eaten"
+  },
+  "watermelon": {
+   "aliases": [
+    "tarbooj"
+   ],
+   "per_100g": {
+    "calories": 30.0,
+    "protein_g": 0.6,
+    "carbs_g": 7.6,
+    "fat_g": 0.2,
+    "fiber_g": 0.4
+   },
+   "units": {
+    "g": 1,
+    "cup": 152.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "fruit"
+   ],
+   "flags": [],
+   "state": "raw"
+  },
+  "white rice": {
+   "aliases": [
+    "rice",
+    "cooked rice",
+    "steamed rice",
+    "brown rice"
+   ],
+   "per_100g": {
+    "calories": 130.0,
+    "protein_g": 2.7,
+    "carbs_g": 28.2,
+    "fat_g": 0.3,
+    "fiber_g": 0.4
+   },
+   "units": {
+    "g": 1,
+    "cup": 158.0,
+    "katori": 100.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "grain"
+   ],
+   "flags": [
+    "refined_grain"
+   ],
+   "state": "cooked"
+  },
+  "cottage cheese": {
+   "aliases": [
+    "cottage"
+   ],
+   "per_100g": {
+    "calories": 98.0,
+    "protein_g": 11.1,
+    "carbs_g": 3.4,
+    "fat_g": 4.3,
+    "fiber_g": 0.0
+   },
+   "units": {
+    "g": 1,
+    "cup": 210.0,
+    "tbsp": 15.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "protein",
+    "dairy"
+   ],
+   "flags": [],
+   "state": "as_eaten"
+  },
+  "figs": {
+   "aliases": [
+    "fig"
+   ],
+   "per_100g": {
+    "calories": 74.0,
+    "protein_g": 0.75,
+    "carbs_g": 19.2,
+    "fat_g": 0.3,
+    "fiber_g": 2.9
+   },
+   "units": {
+    "g": 1,
+    "cup": 149.0,
+    "piece": 50.0,
+    "pieces": 50.0,
+    "medium": 50.0
+   },
+   "default_unit": "piece",
+   "tags": [
+    "fruit"
+   ],
+   "flags": [],
+   "state": "raw"
+  },
+  "cappuccino": {
+   "aliases": [
+    "cappucino",
+    "home cappuccino",
+    "cappuccino skim"
+   ],
+   "per_100g": {
+    "calories": 25.6,
+    "protein_g": 2.3,
+    "carbs_g": 3.3,
+    "fat_g": 0.1,
+    "fiber_g": 0.0
+   },
+   "units": {
+    "g": 1,
+    "cup": 90.0,
+    "glass": 90.0,
+    "mug": 90.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "beverage"
+   ],
+   "flags": [
+    "caffeine"
+   ],
+   "state": "as_eaten"
+  }
+ }
+}

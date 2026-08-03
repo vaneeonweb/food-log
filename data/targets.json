@@ -1,0 +1,205 @@
+{
+ "daily_targets": {
+  "calories": 1369.9,
+  "protein_g": 74.1,
+  "carbs_g": 112.1,
+  "fat_g": 71.4,
+  "fiber_g": 21.4
+ },
+ "daily_tolerance": {
+  "calories_pct": 12,
+  "protein_pct": 15,
+  "carbs_pct": 15,
+  "fat_pct": 15,
+  "fiber_pct": 20
+ },
+ "meal_targets": {
+  "wake_up": {
+   "calories": 35.5,
+   "protein_g": 0.8,
+   "carbs_g": 5.3,
+   "fat_g": 1.5,
+   "fiber_g": 1.5
+  },
+  "breakfast": {
+   "calories": 443.3,
+   "protein_g": 23.8,
+   "carbs_g": 27.7,
+   "fat_g": 27.5,
+   "fiber_g": 5.2
+  },
+  "mid_morning": {
+   "calories": 2.4,
+   "protein_g": 0.0,
+   "carbs_g": 0.5,
+   "fat_g": 0.0,
+   "fiber_g": 0.0
+  },
+  "lunch": {
+   "calories": 419.0,
+   "protein_g": 23.5,
+   "carbs_g": 33.6,
+   "fat_g": 21.7,
+   "fiber_g": 4.8
+  },
+  "mid_afternoon": {
+   "calories": 114.9,
+   "protein_g": 6.8,
+   "carbs_g": 19.2,
+   "fat_g": 1.1,
+   "fiber_g": 5.2
+  },
+  "dinner": {
+   "calories": 354.8,
+   "protein_g": 19.2,
+   "carbs_g": 25.8,
+   "fat_g": 19.6,
+   "fiber_g": 4.7
+  }
+ },
+ "meals": [
+  "wake_up",
+  "breakfast",
+  "mid_morning",
+  "lunch",
+  "mid_afternoon",
+  "dinner",
+  "other"
+ ],
+ "main_meals": [
+  "breakfast",
+  "lunch",
+  "dinner"
+ ],
+ "tags": {
+  "grain": "Whole grain present: oats, quinoa, buckwheat, millets, ragi, jawar, bajra, wheat/atta, rava",
+  "protein": "Protein source present: paneer, cheese, dal, legumes, sprouts, curd/yogurt, nuts, soya chunks",
+  "salad": "Raw salad or raw vegetables",
+  "vegetable": "Cooked vegetables / sabzi",
+  "dairy": "Curd, yogurt, paneer, cheese, milk",
+  "nuts_seeds": "Almonds, walnuts, peanuts, chia, flax, sunflower, pumpkin, watermelon seeds",
+  "fruit": "Any whole fruit",
+  "green_tea": "A cup of green tea",
+  "water": "Plain or infused water",
+  "beverage": "Any other drink"
+ },
+ "flags": {
+  "sugar": "Contains added or refined sugar",
+  "refined_grain": "White rice, brown/red rice, maida, poha, puffed rice, semiya",
+  "bakery": "Bread or any bakery item",
+  "fried": "Deep fried or heavily oil-fried",
+  "high_sugar_fruit": "Banana, chickoo, mango, pineapple, grapes, custard apple, jackfruit",
+  "dried_fruit": "Figs, dates, raisins, dried apricots",
+  "processed": "Packaged or processed food",
+  "caffeine": "Regular tea or coffee (as opposed to green tea)",
+  "restaurant": "Eaten out or ordered in",
+  "alcohol": "Contains alcohol"
+ },
+ "rules": [
+  {
+   "id": "no_sugar",
+   "label": "Avoided added sugar",
+   "type": "flag_absent",
+   "flag": "sugar"
+  },
+  {
+   "id": "no_refined_grain",
+   "label": "Avoided rice / maida / poha",
+   "type": "flag_absent",
+   "flag": "refined_grain"
+  },
+  {
+   "id": "no_bakery",
+   "label": "Avoided bread and bakery items",
+   "type": "flag_absent",
+   "flag": "bakery"
+  },
+  {
+   "id": "no_fried",
+   "label": "Avoided fried food",
+   "type": "flag_absent",
+   "flag": "fried"
+  },
+  {
+   "id": "no_high_sugar_fruit",
+   "label": "Avoided high-sugar fruit",
+   "type": "flag_absent",
+   "flag": "high_sugar_fruit"
+  },
+  {
+   "id": "no_dried_fruit",
+   "label": "Avoided dried fruit",
+   "type": "flag_absent",
+   "flag": "dried_fruit"
+  },
+  {
+   "id": "no_processed",
+   "label": "Avoided processed / packaged food",
+   "type": "flag_absent",
+   "flag": "processed"
+  },
+  {
+   "id": "no_caffeine",
+   "label": "Avoided regular tea/coffee",
+   "type": "flag_absent",
+   "flag": "caffeine"
+  },
+  {
+   "id": "grain_each_meal",
+   "label": "A grain at each main meal",
+   "type": "tag_in_each_main_meal",
+   "tag": "grain"
+  },
+  {
+   "id": "protein_each_meal",
+   "label": "Protein at each main meal",
+   "type": "tag_in_each_main_meal",
+   "tag": "protein"
+  },
+  {
+   "id": "salad_each_meal",
+   "label": "Salad at each main meal",
+   "type": "tag_in_each_main_meal",
+   "tag": "salad"
+  },
+  {
+   "id": "nuts_seeds_daily",
+   "label": "Nuts or seeds during the day",
+   "type": "tag_min_count",
+   "tag": "nuts_seeds",
+   "min": 1
+  },
+  {
+   "id": "green_tea_3x",
+   "label": "3 cups of green tea",
+   "type": "tag_min_count",
+   "tag": "green_tea",
+   "min": 3
+  },
+  {
+   "id": "curd_daily",
+   "label": "Curd or yogurt during the day",
+   "type": "tag_min_count",
+   "tag": "dairy",
+   "min": 1
+  },
+  {
+   "id": "dinner_by_1930",
+   "label": "Dinner finished by 7:30 PM",
+   "type": "meal_before_time",
+   "meal": "dinner",
+   "time": "19:30"
+  },
+  {
+   "id": "green_tea_by_1700",
+   "label": "No green tea after 5 PM",
+   "type": "tag_before_time",
+   "tag": "green_tea",
+   "time": "17:00"
+  }
+ ],
+ "other_daily_targets": {
+  "water_litres": 3,
+  "oil_tbsp_max": 3
+ }
+}

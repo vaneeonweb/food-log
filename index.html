@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f1216" />
+  <title>Food Log</title>
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="./icons/icon.svg" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Food Log</h1>
+    <button id="sync-btn" class="conn" title="Entries are saved on this device first, then synced to Google Drive.">on device</button>
+  </header>
+
+  <main>
+    <section class="capture">
+      <div id="meal-chips" class="meal-chips"></div>
+      <textarea id="meal-input" rows="2"
+        placeholder="e.g. 1/2 cup dal, 2 roti, 1 cup curd"></textarea>
+      <button id="add-btn" class="btn btn--primary">Add items</button>
+      <div id="proposals" class="proposals"></div>
+    </section>
+
+    <section class="today">
+      <h2>Today</h2>
+      <div id="totals" class="totals"></div>
+      <p id="pending-note" class="pending-note" hidden></p>
+      <div id="entries" class="entries"></div>
+    </section>
+  </main>
+
+  <div id="confirm-bar" class="confirm-bar" hidden>
+    <span id="confirm-count" class="confirm-bar__count"></span>
+    <button id="confirm-btn" class="btn btn--confirm">Confirm &amp; log</button>
+  </div>
+
+  <script src="https://accounts.google.com/gsi/client" async></script>
+  <script src="./config.js"></script>
+  <script src="./resolver.js"></script>
+  <script src="./storage.js"></script>
+  <script src="./drive.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
