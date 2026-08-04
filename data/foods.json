@@ -1778,6 +1778,31 @@
    ],
    "flags": [],
    "state": "as_eaten"
+  },
+  "metamucil sugar free": {
+   "aliases": [
+    "metamucil powder",
+    "metamucil sugarfree",
+    "metamucil sugar-free",
+    "sugar free metamucil",
+    "metamucil sf"
+   ],
+   "per_100g": {
+    "calories": 345.0,
+    "protein_g": 0.0,
+    "carbs_g": 86.0,
+    "fat_g": 0.0,
+    "fiber_g": 52.0
+   },
+   "units": {
+    "g": 1,
+    "tbsp": 17.0,
+    "tsp": 5.8
+   },
+   "default_unit": "tsp",
+   "tags": [],
+   "flags": [],
+   "state": "as_eaten"
   }
  }
 }
