@@ -442,7 +442,12 @@
   },
   "greek yogurt": {
    "aliases": [
-    "hung curd"
+    "hung curd",
+    "nonfat greek yogurt",
+    "non fat greek yogurt",
+    "non-fat greek yogurt",
+    "fat free greek yogurt",
+    "0% greek yogurt"
    ],
    "per_100g": {
     "calories": 59.0,
