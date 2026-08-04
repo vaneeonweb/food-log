@@ -1646,6 +1646,60 @@
     "sugar"
    ],
    "state": "as_eaten"
+  },
+  "kozhambu": {
+   "aliases": [
+    "kuzhambu",
+    "kulambu",
+    "puli kuzhambu",
+    "puli kulambu",
+    "tamarind kuzhambu"
+   ],
+   "per_100g": {
+    "calories": 78.0,
+    "protein_g": 1.2,
+    "carbs_g": 8.5,
+    "fat_g": 4.5,
+    "fiber_g": 1.6
+   },
+   "units": {
+    "g": 1,
+    "cup": 200.0,
+    "katori": 125.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "vegetable"
+   ],
+   "flags": [],
+   "state": "cooked"
+  },
+  "kara kozhambu": {
+   "aliases": [
+    "kara kuzhambu",
+    "kara kulambu",
+    "vengaya kuzhambu",
+    "vengaya kara kuzhambu",
+    "spicy kuzhambu"
+   ],
+   "per_100g": {
+    "calories": 100.0,
+    "protein_g": 1.6,
+    "carbs_g": 9.5,
+    "fat_g": 6.5,
+    "fiber_g": 1.8
+   },
+   "units": {
+    "g": 1,
+    "cup": 200.0,
+    "katori": 125.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "vegetable"
+   ],
+   "flags": [],
+   "state": "cooked"
   }
  }
 }
