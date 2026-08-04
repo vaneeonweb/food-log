@@ -1,6 +1,6 @@
 // sw.js — service worker. Caches the app shell + food data so the whole text
 // path works with no network (PLAN.md §Phase 3). Bump CACHE to force an update.
-const CACHE = "foodlog-v7";
+const CACHE = "foodlog-v8";
 const ASSETS = [
   "./", "./index.html", "./style.css",
   "./config.js", "./resolver.js", "./storage.js", "./drive.js", "./app.js",
@@ -24,9 +24,27 @@ self.addEventListener("activate", (e) => {
 // Cache-first for our own assets; network fallback keeps data fresh when online.
 self.addEventListener("fetch", (e) => {
   if (e.request.method !== "GET") return;
+  const url = new URL(e.request.url);
   // Only ever handle our own assets. Google sign-in and Drive API calls must go
   // straight to the network, never through this cache.
-  if (new URL(e.request.url).origin !== self.location.origin) return;
+  if (url.origin !== self.location.origin) return;
+
+  // Data files (food list, targets): network-FIRST, so foods added on the laptop
+  // show up as soon as the phone is online. Cache is only the offline fallback.
+  if (url.pathname.includes("/data/")) {
+    e.respondWith(
+      fetch(url.pathname, { cache: "no-store" })
+        .then((resp) => {
+          const copy = resp.clone();
+          caches.open(CACHE).then((c) => c.put(e.request, copy));
+          return resp;
+        })
+        .catch(() => caches.match(e.request))
+    );
+    return;
+  }
+
+  // App shell (html/js/css): cache-FIRST for instant, offline-capable loads.
   e.respondWith(
     caches.match(e.request).then((hit) =>
       hit ||
