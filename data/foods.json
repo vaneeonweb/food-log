@@ -1493,13 +1493,15 @@
   },
   "cottage cheese": {
    "aliases": [
-    "cottage"
+    "cottage",
+    "low fat cottage cheese",
+    "lowfat cottage cheese"
    ],
    "per_100g": {
-    "calories": 98.0,
-    "protein_g": 11.1,
-    "carbs_g": 3.4,
-    "fat_g": 4.3,
+    "calories": 84.0,
+    "protein_g": 11.5,
+    "carbs_g": 4.5,
+    "fat_g": 2.3,
     "fiber_g": 0.0
    },
    "units": {
