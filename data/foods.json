@@ -1567,6 +1567,85 @@
     "caffeine"
    ],
    "state": "as_eaten"
+  },
+  "cashews": {
+   "aliases": [
+    "cashew",
+    "kaju"
+   ],
+   "per_100g": {
+    "calories": 553.0,
+    "protein_g": 18.2,
+    "carbs_g": 30.2,
+    "fat_g": 43.9,
+    "fiber_g": 3.3
+   },
+   "units": {
+    "g": 1,
+    "cup": 137.0,
+    "piece": 1.5,
+    "pieces": 1.5,
+    "handful": 28.0
+   },
+   "default_unit": "piece",
+   "tags": [
+    "nuts_seeds",
+    "protein"
+   ],
+   "flags": [],
+   "state": "dry"
+  },
+  "dark chocolate tart": {
+   "aliases": [
+    "chocolate tart",
+    "choco tart"
+   ],
+   "per_100g": {
+    "calories": 440.0,
+    "protein_g": 5.0,
+    "carbs_g": 42.0,
+    "fat_g": 28.0,
+    "fiber_g": 3.0
+   },
+   "units": {
+    "g": 1,
+    "piece": 90.0,
+    "pieces": 90.0,
+    "slice": 90.0
+   },
+   "default_unit": "slice",
+   "tags": [],
+   "flags": [
+    "sugar",
+    "bakery",
+    "refined_grain"
+   ],
+   "state": "as_eaten"
+  },
+  "metamucil gummies": {
+   "aliases": [
+    "metamucil",
+    "fiber gummies",
+    "metamucil gummy"
+   ],
+   "per_100g": {
+    "calories": 167.0,
+    "protein_g": 0.0,
+    "carbs_g": 75.0,
+    "fat_g": 0.0,
+    "fiber_g": 42.0
+   },
+   "units": {
+    "g": 1,
+    "piece": 4.0,
+    "pieces": 4.0
+   },
+   "default_unit": "piece",
+   "tags": [],
+   "flags": [
+    "sugar"
+   ],
+   "state": "as_eaten"
   }
  }
 }
