@@ -1700,6 +1700,84 @@
    ],
    "flags": [],
    "state": "cooked"
+  },
+  "fenugreek sprouts": {
+   "aliases": [
+    "methi sprouts",
+    "sprouted fenugreek",
+    "sprouted methi",
+    "menthya sprouts"
+   ],
+   "per_100g": {
+    "calories": 120.0,
+    "protein_g": 9.0,
+    "carbs_g": 18.0,
+    "fat_g": 2.5,
+    "fiber_g": 8.0
+   },
+   "units": {
+    "g": 1,
+    "cup": 90.0,
+    "katori": 75.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "salad",
+    "protein"
+   ],
+   "flags": [],
+   "state": "raw"
+  },
+  "egg white": {
+   "aliases": [
+    "egg whites",
+    "eggwhite"
+   ],
+   "per_100g": {
+    "calories": 52.0,
+    "protein_g": 10.9,
+    "carbs_g": 0.7,
+    "fat_g": 0.2,
+    "fiber_g": 0.0
+   },
+   "units": {
+    "g": 1,
+    "piece": 33.0,
+    "pieces": 33.0
+   },
+   "default_unit": "piece",
+   "tags": [
+    "protein"
+   ],
+   "flags": [],
+   "state": "as_eaten"
+  },
+  "egg": {
+   "aliases": [
+    "whole egg",
+    "eggs",
+    "boiled egg",
+    "egg boiled",
+    "anda"
+   ],
+   "per_100g": {
+    "calories": 143.0,
+    "protein_g": 12.6,
+    "carbs_g": 0.7,
+    "fat_g": 9.5,
+    "fiber_g": 0.0
+   },
+   "units": {
+    "g": 1,
+    "piece": 50.0,
+    "pieces": 50.0
+   },
+   "default_unit": "piece",
+   "tags": [
+    "protein"
+   ],
+   "flags": [],
+   "state": "as_eaten"
   }
  }
 }
