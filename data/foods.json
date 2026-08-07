@@ -1810,6 +1810,66 @@
    "tags": [],
    "flags": [],
    "state": "as_eaten"
+  },
+  "shallow fried vegetables": {
+   "aliases": [
+    "fried vegetables",
+    "okra fry",
+    "bhindi fry",
+    "fried okra",
+    "brinjal fry",
+    "vendakkai poriyal",
+    "shallow fried veg"
+   ],
+   "per_100g": {
+    "calories": 120.0,
+    "protein_g": 2.5,
+    "carbs_g": 8.0,
+    "fat_g": 9.0,
+    "fiber_g": 3.0
+   },
+   "units": {
+    "g": 1,
+    "cup": 130.0,
+    "katori": 100.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "vegetable"
+   ],
+   "flags": [],
+   "state": "cooked"
+  },
+  "shallow fried starchy vegetables": {
+   "aliases": [
+    "potato fry",
+    "aloo fry",
+    "raw banana fry",
+    "vazhakkai fry",
+    "vazhakkai poriyal",
+    "plantain fry",
+    "yam fry",
+    "sweet potato fry",
+    "starchy veg fry"
+   ],
+   "per_100g": {
+    "calories": 165.0,
+    "protein_g": 2.0,
+    "carbs_g": 22.0,
+    "fat_g": 8.0,
+    "fiber_g": 2.5
+   },
+   "units": {
+    "g": 1,
+    "cup": 130.0,
+    "katori": 100.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "vegetable"
+   ],
+   "flags": [],
+   "state": "cooked"
   }
  }
 }
