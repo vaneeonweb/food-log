@@ -1899,6 +1899,37 @@
    ],
    "flags": [],
    "state": "raw"
+  },
+  "beets": {
+   "aliases": [
+    "beetroot",
+    "steamed beets",
+    "boiled beets",
+    "beet",
+    "cooked beets",
+    "steamed beetroot"
+   ],
+   "per_100g": {
+    "calories": 44.0,
+    "protein_g": 1.7,
+    "carbs_g": 10.0,
+    "fat_g": 0.2,
+    "fiber_g": 2.0
+   },
+   "units": {
+    "g": 1,
+    "cup": 170.0,
+    "piece": 80.0,
+    "pieces": 80.0,
+    "katori": 110.0,
+    "medium": 80.0
+   },
+   "default_unit": "cup",
+   "tags": [
+    "vegetable"
+   ],
+   "flags": [],
+   "state": "cooked"
   }
  }
 }
