@@ -1870,6 +1870,35 @@
    ],
    "flags": [],
    "state": "cooked"
+  },
+  "avocado": {
+   "aliases": [
+    "avacado",
+    "butter fruit",
+    "makhanphal"
+   ],
+   "per_100g": {
+    "calories": 160.0,
+    "protein_g": 2.0,
+    "carbs_g": 8.5,
+    "fat_g": 14.7,
+    "fiber_g": 6.7
+   },
+   "units": {
+    "g": 1,
+    "cup": 150.0,
+    "tbsp": 15.0,
+    "piece": 150.0,
+    "pieces": 150.0,
+    "whole": 150.0,
+    "medium": 150.0
+   },
+   "default_unit": "piece",
+   "tags": [
+    "fruit"
+   ],
+   "flags": [],
+   "state": "raw"
   }
  }
 }
