@@ -1924,7 +1924,7 @@
     "katori": 110.0,
     "medium": 80.0
    },
-   "default_unit": "cup",
+   "default_unit": "piece",
    "tags": [
     "vegetable"
    ],
