@@ -25,24 +25,36 @@ window.Drive = (() => {
       client_id: window.CONFIG.CLIENT_ID,
       scope: window.CONFIG.SCOPE,
       callback: () => {},
+      error_callback: () => {},
     });
   }
 
   // Resolve a valid access token. interactive=true is required for the first
   // consent (must be triggered by a user click); after that, silent works while
-  // the Google session is alive.
+  // the Google session is alive. Always SETTLES — a silent request that never
+  // calls back can otherwise leave the UI stuck on "Syncing…", so we also fail
+  // on GIS error_callback and on a timeout.
   function getToken(interactive) {
     return new Promise((resolve, reject) => {
       if (accessToken && Date.now() < tokenExpiry - 60000) return resolve(accessToken);
       if (!ready()) return reject(new Error("Google sign-in unavailable (offline?)"));
       init();
+      let settled = false, timer;
+      const finish = (fn, arg) => {
+        if (settled) return;
+        settled = true;
+        clearTimeout(timer);
+        fn(arg);
+      };
       tokenClient.callback = (resp) => {
-        if (resp.error) return reject(new Error(resp.error));
+        if (resp && resp.error) return finish(reject, new Error(resp.error));
         accessToken = resp.access_token;
         tokenExpiry = Date.now() + (resp.expires_in || 3600) * 1000;
         localStorage.setItem("driveConnected", "1");
-        resolve(accessToken);
+        finish(resolve, accessToken);
       };
+      tokenClient.error_callback = (err) => finish(reject, new Error((err && err.type) || "auth_failed"));
+      timer = setTimeout(() => finish(reject, new Error("auth_timeout")), interactive ? 120000 : 8000);
       tokenClient.requestAccessToken({ prompt: interactive ? "consent" : "" });
     });
   }
