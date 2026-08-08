@@ -77,20 +77,12 @@ async function trySync() {
 
 async function onSyncButton() {
   const btn = $("#sync-btn");
-  // First, try a quick silent sync if we already have a live token — no popup.
-  if (window.Drive && window.Drive.isConnected() && navigator.onLine) {
-    btn.textContent = "Syncing…";
-    try {
-      const r = await window.Drive.sync();
-      if (r && r.ok) { updateSyncStatus(); syncFavorites(); return; }
-    } catch (e) { /* token likely expired — fall through to interactive re-auth */ }
-  }
-  // Otherwise (or if that failed) re-authorize interactively. This is a user
-  // gesture, so the Google popup is allowed and yields a fresh token even when
-  // the silent background refresh was blocked (which phones do aggressively).
   btn.textContent = "Connecting…";
+  // Open the Google sign-in immediately, in the same tick as your tap — any
+  // async work first (a silent-token attempt) would spend the "user gesture"
+  // and the browser would then block the popup (popup_failed_to_open).
   try {
-    await window.Drive.connect(); // interactive token + pushes the queued days
+    await window.Drive.connect(); // requests token within the gesture, then pushes the queue
   } catch (e) {
     alert("Couldn't sync to Google Drive — please try again.\n" + (e.message || e));
   }

@@ -55,7 +55,9 @@ window.Drive = (() => {
       };
       tokenClient.error_callback = (err) => finish(reject, new Error((err && err.type) || "auth_failed"));
       timer = setTimeout(() => finish(reject, new Error("auth_timeout")), interactive ? 120000 : 8000);
-      tokenClient.requestAccessToken({ prompt: interactive ? "consent" : "" });
+      // interactive: default prompt — shows account/consent UI only if needed
+      // (and only works inside a user gesture); non-interactive: silent ("").
+      tokenClient.requestAccessToken(interactive ? {} : { prompt: "" });
     });
   }
 
