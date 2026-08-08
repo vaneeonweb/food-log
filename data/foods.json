@@ -1957,6 +1957,35 @@
     "fried"
    ],
    "state": "cooked"
+  },
+  "fairlife protein shake": {
+   "aliases": [
+    "fairlife",
+    "fairlife shake",
+    "fairlife nutrition plan",
+    "fairlife 30g protein shake",
+    "fairlife protein",
+    "core power"
+   ],
+   "per_100g": {
+    "calories": 44.0,
+    "protein_g": 8.8,
+    "carbs_g": 1.8,
+    "fat_g": 0.7,
+    "fiber_g": 0.3
+   },
+   "units": {
+    "g": 1,
+    "cup": 240.0,
+    "piece": 340.0,
+    "pieces": 340.0
+   },
+   "default_unit": "piece",
+   "tags": [
+    "protein"
+   ],
+   "flags": [],
+   "state": "as_eaten"
   }
  }
 }
