@@ -1,6 +1,6 @@
 // sw.js — service worker. Caches the app shell + food data so the whole text
 // path works with no network (PLAN.md §Phase 3). Bump CACHE to force an update.
-const CACHE = "foodlog-v12";
+const CACHE = "foodlog-v13";
 const ASSETS = [
   "./", "./index.html", "./style.css",
   "./config.js", "./resolver.js", "./storage.js", "./drive.js", "./app.js",
