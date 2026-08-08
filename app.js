@@ -37,6 +37,7 @@ async function boot() {
   updateSyncStatus();
   window.addEventListener("online", trySync);
   trySync(); // flush anything queued from a previous offline session
+  syncFavorites(); // load favorites from Drive (recompute if >4 days old)
 }
 
 // ---- Drive sync ----------------------------------------------------------
@@ -87,6 +88,7 @@ async function onSyncButton() {
     alert("Could not connect to Google Drive:\n" + (e.message || e));
   }
   updateSyncStatus();
+  syncFavorites(); // load/compute favorites once connected
 }
 
 // ---- meal selector -------------------------------------------------------
@@ -116,9 +118,53 @@ function renderMealChips() {
 }
 
 // ---- favorites -----------------------------------------------------------
-// Your most-logged foods, each at the portion you most often use. Computed live
-// from your own history so it adapts as you log; tap one to drop it into the
-// entry at that portion (still confirmed, still adjustable).
+// Your most-logged foods, each at the portion you most often use. The list is
+// recomputed from your own history at most every 4 days, stored in YOUR Drive
+// (food_log/favorites.json), and loaded from there — so it is portable across
+// your devices and never shared with anyone else's account. Tap one to drop it
+// into the entry at that portion (still confirmed, still adjustable).
+
+const FAV_INTERVAL_MS = 4 * 24 * 60 * 60 * 1000; // 4 days
+let currentFavorites = [];
+
+function cacheFavorites(payload) {
+  try { localStorage.setItem("favoritesCache", JSON.stringify(payload)); } catch (e) {}
+}
+function loadCachedFavorites() {
+  try { return (JSON.parse(localStorage.getItem("favoritesCache")) || {}).favorites || []; }
+  catch (e) { return []; }
+}
+
+// Load favorites from Drive; recompute + push only if the stored list is missing
+// or older than 4 days, and only from a device that actually has history (so a
+// freshly-signed-in device can't overwrite your list with an empty one).
+async function syncFavorites() {
+  if (!window.Drive || !window.Drive.isConnected() || !navigator.onLine) {
+    currentFavorites = loadCachedFavorites();
+    renderFavorites();
+    return;
+  }
+  let remote = null;
+  try { remote = await window.Drive.readFavorites(); } catch (e) { console.warn("favorites read failed", e); }
+  if (remote && Array.isArray(remote.favorites)) {
+    currentFavorites = remote.favorites;
+    cacheFavorites(remote);
+  }
+  const last = remote && remote.computed_at;
+  const stale = !last || (Date.now() - new Date(last).getTime()) >= FAV_INTERVAL_MS;
+  if (stale) {
+    const all = await window.Store.getAllEntries();
+    const hasHistory = all.filter((e) => e.resolved && e.food).length >= 5;
+    if (hasHistory) {
+      const computed = await computeFavorites(15);
+      const payload = { computed_at: new Date().toISOString(), favorites: computed };
+      try { await window.Drive.writeFavorites(payload); } catch (e) { console.warn("favorites write failed", e); }
+      currentFavorites = computed;
+      cacheFavorites(payload);
+    }
+  }
+  renderFavorites();
+}
 
 async function computeFavorites(limit = 15) {
   const all = await window.Store.getAllEntries();
@@ -142,20 +188,19 @@ async function computeFavorites(limit = 15) {
   return favs.slice(0, limit);
 }
 
-async function renderFavorites() {
+function renderFavorites() {
   const section = $("#favorites-section");
   const box = $("#favorites");
-  const favs = await computeFavorites(15);
-  if (!favs.length) { section.hidden = true; return; }
-  section.hidden = false;
   box.innerHTML = "";
-  for (const fav of favs) {
+  for (const fav of (currentFavorites || [])) {
+    if (!FOODS[fav.food]) continue; // food no longer in the list
     const chip = document.createElement("button");
     chip.className = "fav";
     chip.textContent = `${fmtAmt(fav.amount)} ${fav.unit} ${fav.food}`;
     chip.onclick = () => addFavorite(fav);
     box.appendChild(chip);
   }
+  section.hidden = box.children.length === 0;
 }
 
 function addFavorite(fav) {
@@ -330,7 +375,6 @@ async function refreshToday() {
 
   renderTotals(totals, pending);
   renderEntryList(entries);
-  renderFavorites();
 }
 
 function renderTotals(totals, pending) {

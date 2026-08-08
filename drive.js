@@ -120,6 +120,51 @@ window.Drive = (() => {
     }
   }
 
+  // --- arbitrary files in the food_log root (used for favorites.json) ---
+  async function upsertRootFile(filename, contentStr, mime) {
+    const folderId = await ensureFolder(window.CONFIG.ROOT_FOLDER, "root");
+    const existingId = await findChild(filename, folderId);
+    const token = await getToken(false);
+    if (existingId) {
+      const resp = await fetch(
+        `https://www.googleapis.com/upload/drive/v3/files/${existingId}?uploadType=media`,
+        { method: "PATCH", headers: { Authorization: `Bearer ${token}`, "Content-Type": mime }, body: contentStr }
+      );
+      if (!resp.ok) throw new Error(`Drive update ${resp.status}`);
+    } else {
+      const boundary = "foodlog" + Date.now();
+      const metadata = { name: filename, parents: [folderId] };
+      const body =
+        `--${boundary}\r\nContent-Type: application/json; charset=UTF-8\r\n\r\n${JSON.stringify(metadata)}\r\n` +
+        `--${boundary}\r\nContent-Type: ${mime}\r\n\r\n${contentStr}\r\n--${boundary}--`;
+      const resp = await fetch(
+        "https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart",
+        { method: "POST", headers: { Authorization: `Bearer ${token}`, "Content-Type": `multipart/related; boundary=${boundary}` }, body }
+      );
+      if (!resp.ok) throw new Error(`Drive create ${resp.status}`);
+    }
+  }
+
+  async function readRootFile(filename) {
+    const folderId = await ensureFolder(window.CONFIG.ROOT_FOLDER, "root");
+    const id = await findChild(filename, folderId);
+    if (!id) return null;
+    const token = await getToken(false);
+    const resp = await fetch(`https://www.googleapis.com/drive/v3/files/${id}?alt=media`, {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+    if (!resp.ok) throw new Error(`Drive read ${resp.status}`);
+    return resp.text();
+  }
+
+  async function readFavorites() {
+    const txt = await readRootFile("favorites.json");
+    return txt ? JSON.parse(txt) : null;
+  }
+  async function writeFavorites(obj) {
+    return upsertRootFile("favorites.json", JSON.stringify(obj), "application/json");
+  }
+
   // The raw record that lands in Drive — deliberately WITHOUT macros.
   function toRawRecord(e) {
     return {
@@ -149,5 +194,5 @@ window.Drive = (() => {
 
   const isConnected = () => !!localStorage.getItem("driveConnected");
 
-  return { sync, connect, isConnected, ready, _ensureDayFolder: ensureDayFolder, _toRawRecord: toRawRecord };
+  return { sync, connect, isConnected, ready, readFavorites, writeFavorites, _toRawRecord: toRawRecord };
 })();
