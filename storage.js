@@ -59,6 +59,15 @@ async function addEntry(entry) {
   markDirty(entry.date);
 }
 
+async function getAllEntries() {
+  const db = await openDB();
+  return tx(db, "readonly", (store) => new Promise((res, rej) => {
+    const req = store.getAll();
+    req.onsuccess = () => res(req.result || []);
+    req.onerror = () => rej(req.error);
+  }));
+}
+
 async function getEntriesByDate(date) {
   const db = await openDB();
   return tx(db, "readonly", (store) => new Promise((res, rej) => {
@@ -74,4 +83,4 @@ async function deleteEntry(id, date) {
   if (date) markDirty(date);
 }
 
-window.Store = { addEntry, getEntriesByDate, deleteEntry, markDirty, getDirtyDates, clearDirty };
+window.Store = { addEntry, getAllEntries, getEntriesByDate, deleteEntry, markDirty, getDirtyDates, clearDirty };

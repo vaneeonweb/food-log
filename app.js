@@ -115,6 +115,60 @@ function renderMealChips() {
   }
 }
 
+// ---- favorites -----------------------------------------------------------
+// Your most-logged foods, each at the portion you most often use. Computed live
+// from your own history so it adapts as you log; tap one to drop it into the
+// entry at that portion (still confirmed, still adjustable).
+
+async function computeFavorites(limit = 15) {
+  const all = await window.Store.getAllEntries();
+  const byFood = {}; // food -> { count, portions: {"amount|unit": n} }
+  for (const e of all) {
+    if (!e.resolved || !e.food || !FOODS[e.food]) continue;
+    const f = byFood[e.food] || (byFood[e.food] = { count: 0, portions: {} });
+    f.count += 1;
+    const pk = `${e.amount}|${e.unit}`;
+    f.portions[pk] = (f.portions[pk] || 0) + 1;
+  }
+  const favs = Object.entries(byFood).map(([food, d]) => {
+    let best = null, bestN = -1;
+    for (const [pk, n] of Object.entries(d.portions)) {
+      if (n > bestN) { bestN = n; best = pk; }
+    }
+    const [amount, unit] = best.split("|");
+    return { food, count: d.count, amount: parseFloat(amount), unit };
+  });
+  favs.sort((a, b) => b.count - a.count);
+  return favs.slice(0, limit);
+}
+
+async function renderFavorites() {
+  const section = $("#favorites-section");
+  const box = $("#favorites");
+  const favs = await computeFavorites(15);
+  if (!favs.length) { section.hidden = true; return; }
+  section.hidden = false;
+  box.innerHTML = "";
+  for (const fav of favs) {
+    const chip = document.createElement("button");
+    chip.className = "fav";
+    chip.textContent = `${fmtAmt(fav.amount)} ${fav.unit} ${fav.food}`;
+    chip.onclick = () => addFavorite(fav);
+    box.appendChild(chip);
+  }
+}
+
+function addFavorite(fav) {
+  const food = FOODS[fav.food];
+  if (!food) return;
+  proposals.push({
+    kind: "known", key: fav.food, label: fav.food,
+    amount: fav.amount, unit: fav.unit, units: Object.keys(food.units),
+    note: null, raw: `${fav.amount} ${fav.unit} ${fav.food}`,
+  });
+  renderProposals();
+}
+
 // ---- parsing → proposals -------------------------------------------------
 
 function parseInput() {
@@ -276,6 +330,7 @@ async function refreshToday() {
 
   renderTotals(totals, pending);
   renderEntryList(entries);
+  renderFavorites();
 }
 
 function renderTotals(totals, pending) {
