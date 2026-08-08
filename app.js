@@ -76,19 +76,26 @@ async function trySync() {
 }
 
 async function onSyncButton() {
-  if (window.Drive && window.Drive.isConnected()) {
-    await trySync();
-    return;
-  }
   const btn = $("#sync-btn");
+  // First, try a quick silent sync if we already have a live token — no popup.
+  if (window.Drive && window.Drive.isConnected() && navigator.onLine) {
+    btn.textContent = "Syncing…";
+    try {
+      const r = await window.Drive.sync();
+      if (r && r.ok) { updateSyncStatus(); syncFavorites(); return; }
+    } catch (e) { /* token likely expired — fall through to interactive re-auth */ }
+  }
+  // Otherwise (or if that failed) re-authorize interactively. This is a user
+  // gesture, so the Google popup is allowed and yields a fresh token even when
+  // the silent background refresh was blocked (which phones do aggressively).
   btn.textContent = "Connecting…";
   try {
-    await window.Drive.connect();
+    await window.Drive.connect(); // interactive token + pushes the queued days
   } catch (e) {
-    alert("Could not connect to Google Drive:\n" + (e.message || e));
+    alert("Couldn't sync to Google Drive — please try again.\n" + (e.message || e));
   }
   updateSyncStatus();
-  syncFavorites(); // load/compute favorites once connected
+  syncFavorites();
 }
 
 // ---- meal selector -------------------------------------------------------
