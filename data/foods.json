@@ -1930,6 +1930,33 @@
    ],
    "flags": [],
    "state": "cooked"
+  },
+  "aloo tikki": {
+   "aliases": [
+    "alu tikki",
+    "potato tikki",
+    "aloo patty",
+    "potato patty",
+    "aloo cutlet"
+   ],
+   "per_100g": {
+    "calories": 170.0,
+    "protein_g": 3.0,
+    "carbs_g": 26.0,
+    "fat_g": 7.0,
+    "fiber_g": 2.5
+   },
+   "units": {
+    "g": 1,
+    "piece": 60.0,
+    "pieces": 60.0
+   },
+   "default_unit": "piece",
+   "tags": [],
+   "flags": [
+    "fried"
+   ],
+   "state": "cooked"
   }
  }
 }
