@@ -449,9 +449,20 @@ function wireEvents() {
 }
 
 function registerSW() {
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("./sw.js").catch(() => {});
-  }
+  if (!("serviceWorker" in navigator)) return;
+  const hadController = !!navigator.serviceWorker.controller;
+  navigator.serviceWorker.register("./sw.js")
+    .then((reg) => { reg.update(); }) // check for a newer version each launch
+    .catch(() => {});
+  // When a new service worker takes over (it self-activates via skipWaiting),
+  // reload once so the page runs the new code automatically — no manual
+  // double-relaunch needed. Skip on the very first install (no prior controller).
+  let refreshing = false;
+  navigator.serviceWorker.addEventListener("controllerchange", () => {
+    if (refreshing || !hadController) return;
+    refreshing = true;
+    window.location.reload();
+  });
 }
 
 function ymd(d) { return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`; }
